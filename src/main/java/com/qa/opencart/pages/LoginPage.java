@@ -72,7 +72,7 @@ public class LoginPage {
 	  eleUtil.doSendKeysWithWait(emailId, AppConstants.MEDIUM_DEFAULT_TIME_OUT,userName);
 	  eleUtil.doSendKeys(password, pwd);
 	  eleUtil.doClick(loginButton);
-	   String errorMesg = eleUtil.getElementText(errorMessage, AppConstants.SMALL_DEFAULT_TIME_OUT).trim();
+	   String errorMesg = eleUtil.getElementText(errorMessage, AppConstants.MEDIUM_DEFAULT_TIME_OUT).trim();
 		System.out.println(errorMesg);
        
 	   if(errorMesg.equalsIgnoreCase(AppConstants.LOGIN_FAILURE_MESSAGE)) return true;

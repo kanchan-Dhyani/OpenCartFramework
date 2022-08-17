@@ -36,7 +36,7 @@ public class BaseTest {
 		this.df = new DriverFactory();
 		this.prop = df.initProp();
 		this.driver = df.initDriver(prop.getProperty("browser"));
-		System.out.println(String.format("prop.getProperty(\"user\") %s,  prop.getProperty(\"password\") : %s : " ,prop.getProperty("user"),  prop.getProperty("password")));
+		//System.out.println(String.format("prop.getProperty(\"user\") %s,  prop.getProperty(\"password\") : %s : " ,prop.getProperty("user"),  prop.getProperty("password")));
 		this.homePage= new HomePage(driver);
 		//loginPage = new LoginPage(driver);
 		this.softAssert = new SoftAssert();
@@ -45,7 +45,7 @@ public class BaseTest {
 	@AfterTest
 	public void tearDown()
 	{
-		System.out.println("quitting");
+		//System.out.println("quitting");
 		driver.quit();
 	}
 }

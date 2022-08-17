@@ -25,8 +25,8 @@ public class AccountsPageTest extends BaseTest {
 	 public void AccSetup()
 	 {
 		 
-		 System.out.println("null test : " +homePage== null);
-		 System.out.println(String.format("prop.getProperty(\"user\") %s,  prop.getProperty(\"password\") : %s : " ,prop.getProperty("user"),  prop.getProperty("password")));
+		// System.out.println("null test : " +homePage== null);
+		// System.out.println(String.format("prop.getProperty(\"user\") %s,  prop.getProperty(\"password\") : %s : " ,prop.getProperty("user"),  prop.getProperty("password")));
 		 accountsPage = homePage.goToLoginPage().doLogin(prop.getProperty("user"), prop.getProperty("password"));
 		 
 	 }

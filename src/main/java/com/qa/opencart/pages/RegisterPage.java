@@ -36,7 +36,7 @@ public class RegisterPage {
 	//************ACTIONS***************
 	public String registerUser(String firstName, String lastName, String email, String phone, String password, String subscribe)
 	{
-		eleUtil.doSendKeysWithWait(this.firstName,AppConstants.MEDIUM_DEFAULT_TIME_OUT , firstName);
+		eleUtil.doSendKeysWithWait(this.firstName,AppConstants.LONG_DEFAULT_TIME_OUT , firstName);
 		eleUtil.doSendKeys(this.lastName, lastName);
 		eleUtil.doSendKeys(this.email, email);
 		eleUtil.doSendKeys(this.telephone, phone);
@@ -52,7 +52,7 @@ public class RegisterPage {
 		
 		eleUtil.doClick(continueButton);
 		
-		String successText = eleUtil.waitForElementVisibility(sucessMessg, AppConstants.MEDIUM_DEFAULT_TIME_OUT ).getText();
+		String successText = eleUtil.waitForElementVisibility(sucessMessg, AppConstants.LONG_DEFAULT_TIME_OUT ).getText();
 		
 		return successText;
 		
