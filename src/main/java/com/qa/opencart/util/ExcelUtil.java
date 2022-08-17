@@ -31,7 +31,12 @@ public class ExcelUtil {
 			{
 				for(int j = 0; j < totalColumns; j++)
 				{
-				   data[i][j]= sheet.getRow(i+1).getCell(j).toString();
+				   try {
+					data[i][j]= sheet.getRow(i+1).getCell(j).toString();
+				} catch (NullPointerException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				}
 			}
 			

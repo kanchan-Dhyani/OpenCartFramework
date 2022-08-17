@@ -6,7 +6,7 @@
 <listeners>
  <listener class-name= "com.qa.opencart.listeners.ExtentReportListener" />
  <listener class-name= "com.qa.opencart.listeners.TestAllureListener" />
-  <listener class-name= "com.qa.opencart.listeners.AnnotationTransformer" />
+ <!--   <listener class-name= "com.qa.opencart.listeners.AnnotationTransformer" /> -->
 </listeners>
 
 <test name="Accounts page test"  >
@@ -21,17 +21,19 @@
 		</classes>
 	</test>
 	
+	<test name="Register Page test"  >
+	<classes>
+			 <class name="com.qa.opencart.tests.RegisterPageTest" />
+		</classes>
+	</test>
+	
 	<test name="Product Search test"  >
 	<classes>
 			 <class name="com.qa.opencart.tests.ProductSearchTest" />
 		</classes>
 	</test>
 	
-	<test name="Register Page test"  >
-	<classes>
-			 <class name="com.qa.opencart.tests.RegisterPageTest" />
-		</classes>
-	</test>
+	
 	
 	
 
