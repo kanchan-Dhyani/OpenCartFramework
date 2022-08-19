@@ -1,6 +1,6 @@
 package com.qa.opencart.gitPages;
 
-public class Test1 {
+public class devpage {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
