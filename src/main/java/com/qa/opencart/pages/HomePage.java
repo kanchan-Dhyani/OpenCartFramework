@@ -3,7 +3,9 @@ package com.qa.opencart.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.util.ElementUtil;
 
 public class HomePage {
@@ -39,4 +41,15 @@ public class HomePage {
 		act.moveToElement(eleUtil.getWebElement(myAccount)).click().moveToElement(eleUtil.getWebElement(login)).click().perform();
 		return new LoginPage(driver);
 	}
+	
+	public String verifyFooterLink(String FooterLinkName, String footerLinkTitle)
+	{
+		By el = By.linkText(FooterLinkName);
+		eleUtil.doClickWithWait(el, AppConstants.SMALL_DEFAULT_TIME_OUT);
+		
+		return eleUtil.waitForTitleToBe(AppConstants.SMALL_DEFAULT_TIME_OUT, footerLinkTitle);
+		
+	}
+	
+	
 }

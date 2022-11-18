@@ -72,5 +72,12 @@ public class AccountsPageTest extends BaseTest {
 		   
 		  Assert.assertEquals(actHeadersList, expectedHeadersList);
 	 }
+	 
+	 
+	 @Test
+		public void logOutUserTest()
+		{
+		 accountsPage.logOutUser();
+		}
 
 }

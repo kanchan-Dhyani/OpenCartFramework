@@ -32,6 +32,19 @@
 			 <class name="com.qa.opencart.tests.ProductSearchTest" />
 		</classes>
 	</test>
+	<test name="Perform Checkout test"  >
+	<classes>
+			 <class name="com.qa.opencart.tests.PerformCheckoutTests" />
+		</classes>
+	</test>
+	<test name="Perform HomePage test"  >
+	<classes>
+			 <class name="com.qa.opencart.tests.homePageTests" />
+		</classes>
+	</test>
+	
+	
+	
 	
 	
 	

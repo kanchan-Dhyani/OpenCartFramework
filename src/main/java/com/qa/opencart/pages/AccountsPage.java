@@ -68,7 +68,11 @@ public class AccountsPage {
 	}
 	
 	
-	
+	public LogoutPage logOutUser()
+	{
+		eleUtil.doClick(logoutLink);
+		return new LogoutPage(driver);
+	}
 
 	
 	
@@ -87,6 +91,9 @@ public class AccountsPage {
 		
 		return new SearchResultsPage(driver);
 	}
+	
+	
+	
 	
 }
 

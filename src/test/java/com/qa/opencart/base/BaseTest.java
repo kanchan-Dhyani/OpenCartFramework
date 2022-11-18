@@ -3,6 +3,8 @@ package com.qa.opencart.base;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
@@ -11,10 +13,11 @@ import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.HomePage;
 import com.qa.opencart.pages.LoginPage;
+import com.qa.opencart.pages.LogoutPage;
 import com.qa.opencart.pages.ProductInfoPage;
 import com.qa.opencart.pages.RegisterPage;
 import com.qa.opencart.pages.SearchResultsPage;
-import com.qa.opencart.util.ExcelUtil;
+import com.qa.opencart.pages.ShoppingCart;
 
 public class BaseTest {
 	
@@ -26,8 +29,11 @@ public class BaseTest {
 	public SearchResultsPage searchResultPage;
 	public ProductInfoPage productInfoPage;
 	public RegisterPage registerPage;
+	public LogoutPage logoutPage;
 	public Properties prop;
 	public SoftAssert softAssert;
+	public ShoppingCart shopCart;
+	
 	@BeforeTest
 	public void setup()
 	{
@@ -40,6 +46,7 @@ public class BaseTest {
 		this.homePage= new HomePage(driver);
 		//loginPage = new LoginPage(driver);
 		this.softAssert = new SoftAssert();
+		
 	}
 
 	@AfterTest
